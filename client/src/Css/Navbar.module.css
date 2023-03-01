@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    flex-grow: 1;
+    height: 10vh;
+    margin: auto;
+	background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+}
+
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50%;
+	flex-direction: row;
+	/* color: #b65ad8 */
+}
+
+.img{
+	height: 100%;
+}
+
+.img img{
+	height: 100%;
+}
+
+.logo_head{
+	display: flex;
+	height: 100%;
+	align-items:stretch;
+	flex-direction:column;
+}
+	
+
+
+

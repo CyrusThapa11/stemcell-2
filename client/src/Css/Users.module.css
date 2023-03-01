@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+.name1 {
+  height: 100%;
+  width: 80%;
+  /* border: 2px solid red; */
+  /* background: #000; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  height: 50%;
+  width: 30%;
+  /* background: rgb(202, 68, 68); */
+  /* padding-top: 75%; */
+
+  margin: auto;
+  border-radius: 15px;
+}
+
+.photo {
+  height: 50%;
+  width: 100%;
+  /* background: #000; */
+  /* border: 1px solid salmon; */
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background: rgb(126, 125, 125);
+}
+
+.photo img {
+  height: 100%;
+  margin: auto;
+}
+.who {
+  height: 40%;
+  background: rgb(80, 48, 92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-bottom-left-radius: 25px; */
+}
+
+.who span {
+  /* height: 100%; */
+  font-family: monospace;
+  font-size: 3vh;
+  color: white;
+}
