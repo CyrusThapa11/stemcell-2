@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
-import CurrentPlans from "./CurrentPlans";
-import Profile from "./Profile";
+// import Profile from "../Profile";
 import Sidebar from "./Sidebar";
+import CurrentPlans from "./CurrentPlans";
 
 const PatientPlans = () => {
   return (

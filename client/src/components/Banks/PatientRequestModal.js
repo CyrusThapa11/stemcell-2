@@ -25,7 +25,7 @@ const customStyles = {
   },
 };
 
-const QueryModal = ({ styles, text, collectionn, Datepicker }) => {
+const PatientRequestModal = ({ styles, text, collectionn, Datepicker }) => {
   let subtitle;
 
   const { state, dispatch } = useContext(EthContext);
@@ -185,4 +185,4 @@ const QueryModal = ({ styles, text, collectionn, Datepicker }) => {
   );
 };
 
-export default QueryModal;
+export default PatientRequestModal;

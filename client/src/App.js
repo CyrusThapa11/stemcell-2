@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { EthContext, EthProvider } from "./contexts/EthContext";
 import "./App.css";
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
@@ -31,6 +32,7 @@ import MyAppointments from "./components/Banks/MyAppointments";
 import BookAppointment from "./components/Banks/BookAppointment";
 import PageNotFound from "./components/Banks/PageNotFound";
 import ViewPatient from "./components/Banks/ViewPatient";
+import CreateFund from "./components/Banks/CreateFund";
 
 const provider = new GoogleAuthProvider();
 function App() {
@@ -131,13 +133,15 @@ function App() {
           exact
           path="/Donor/dashboard"
           element={
-            state.uid == null ? <Navigate to="/" /> : <PatientDashboard />
+            <PatientDashboard />
+            //  state.uid == null ? <Navigate to="/" /> :
           }
         />
         <Route
           exact
           path="/Patient/dashboard"
-          element={state.uid == null ? <Navigate to="/" /> : <NeedyPatient />}
+          element={<NeedyPatient />}
+          // state.uid == null ? <Navigate to="/" /> :
         />
         <Route
           exact
@@ -148,7 +152,8 @@ function App() {
         <Route
           exact
           path="/my-plans/"
-          element={state.uid == null ? <Navigate to="/" /> : <PatientPlans />}
+          element={<PatientPlans />}
+          // state.uid == null ? <Navigate to="/" /> :
         />
         {/* <Route exact path="/all-patients/" element={<AllPatientsPage />} /> */}
         <Route
@@ -194,6 +199,12 @@ function App() {
               <BankDashboard Component={AllStemCellsPage} />
             )
           }
+        />
+        <Route
+          exact
+          path="/create-fund/"
+          element={<CreateFund />}
+          // state.uid == null ? <Navigate to="/" /> :
         />
         <Route
           exact

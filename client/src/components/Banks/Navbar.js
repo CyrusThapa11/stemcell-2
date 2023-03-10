@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { EthContext } from "../../contexts/EthContext";
 
@@ -94,6 +95,16 @@ const Navbar = ({ login, logout }) => {
                 <>
                   <Link
                     to="/my-plans/"
+                    className="mr-5 cursor-pointer font-semibold hover:bg-[#ECC5FB] hover:text-purple-600 p-2 rounded-lg"
+                  >
+                    Profile
+                  </Link>
+                </>
+              )}
+              {state.type === "Patients" && (
+                <>
+                  <Link
+                    to="/Patient/dashboard"
                     className="mr-5 cursor-pointer font-semibold hover:bg-[#ECC5FB] hover:text-purple-600 p-2 rounded-lg"
                   >
                     Profile

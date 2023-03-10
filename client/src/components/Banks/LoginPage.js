@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
 import ReactLoading from "react-loading";
 
@@ -154,23 +155,23 @@ const LoginPage = () => {
         toast.error("Invalid Credentials");
         dispatch({ type: "UNSET_LOADING" });
         return;
-      }
-
-      console.log(" PASSWORD MATCHED");
-      toast("Logged-in Sucessfully");
-      dispatch({
-        type: "UPDATE",
-        data: { ...newuser, uid: user.uid },
-      });
-
-      if (user.type === "Donor") {
-        navigate(`/Donor/dashboard`);
-      } else if (user.type === "Patients") {
-        navigate(`/Patient/dashboard`);
-      } else if (user.type === "Bank") {
-        navigate(`/Bank/dashboard`);
       } else {
-        navigate(`/Verifier/dashboard`);
+        console.log(" PASSWORD MATCHED");
+        toast("Logged-in Sucessfully");
+        dispatch({
+          type: "UPDATE",
+          data: { ...newuser, uid: user.uid },
+        });
+
+        if (user.type === "Donor") {
+          navigate(`/Donor/dashboard`);
+        } else if (user.type === "Patients") {
+          navigate(`/Patient/dashboard`);
+        } else if (user.type === "Bank") {
+          navigate(`/Bank/dashboard`);
+        } else {
+          navigate(`/Verifier/dashboard`);
+        }
       }
     } else {
       // doc.data() will be undefined in this case

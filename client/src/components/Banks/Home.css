@@ -1,0 +1,11 @@
+.fund {
+  background-image: linear-gradient(
+    to left top,
+    #d8b4fe,
+    #ccb4ff,
+    #bfb4ff,
+    #b2b4fe,
+    #a5b4fc
+  );
+  /* background-size: 100vh; */
+}

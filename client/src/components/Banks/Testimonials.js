@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-vars */
 import React from "react";
 
 const Testimonials = () => {
@@ -34,7 +36,7 @@ const Testimonials = () => {
                     className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
                   />
                   <span className="flex-grow flex flex-col pl-4">
-                    <span className="title-font font-medium text-teal-500 text-lg font-semibold">
+                    <span className="title-font  text-teal-500 text-lg font-semibold">
                       Hesiba Jacob (Hyderabad)
                     </span>
                     {/* <span className="text-gray-500 text-sm">UI DEVELOPER</span> */}

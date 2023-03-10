@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
-import Content from "./Content";
 import NeedyContent from "./NeedyContent";
+
 import NeedyPatientSidebar from "./NeedyPatientSidebar";
 
 const NeedyPatient = () => {
