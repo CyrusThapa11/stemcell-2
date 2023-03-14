@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA0gzX6yPcVtYZ-7yA9E89rGsOxsGxf9OE",
-  authDomain: "stem-cell-ec9e0.firebaseapp.com",
-  projectId: "stem-cell-ec9e0",
-  storageBucket: "stem-cell-ec9e0.appspot.com",
-  messagingSenderId: "529620368337",
-  appId: "1:529620368337:web:01690171212044ab88bef0",
+  apiKey: "AIzaSyAG1DwKrVXK5AN0GBnrVQEvcCAM6qVoqyc",
+  authDomain: "stemm-96669.firebaseapp.com",
+  projectId: "stemm-96669",
+  storageBucket: "stemm-96669.appspot.com",
+  messagingSenderId: "284222511326",
+  appId: "1:284222511326:web:6bd3a459a3961262668a4f"
 };
 
 // Initialize Firebase

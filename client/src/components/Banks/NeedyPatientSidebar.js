@@ -132,8 +132,8 @@ const NeedyPatientSidebar = ({ imagename }) => {
                 >
                   {/* modal */}
                   <QueryModal
-                    text="Book Appointment"
-                    collectionn="NeedyInquiry"
+                    text="Disease Inquiry"
+                    collectionn="DiseaseInquiry"
                     Datepicker={Datepicker}
                   />
                 </span>
