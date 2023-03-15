@@ -1,4 +1,4 @@
-const actions = {
+export const actions = {
   init: "INIT",
   upate: "UPDATE",
   add: "ADD",
@@ -8,6 +8,7 @@ const actions = {
   seterror: "SET_ERROR",
   unseterror: "UNSET_ERROR",
   logout: "LOGOUT",
+  add_fund: "ADD_FUND",
 };
 
 const initialState = {
@@ -29,6 +30,7 @@ const initialState = {
   loading: false,
   error: false,
   errormessage: "",
+  allFunds: "",
 };
 
 const reducer = (state, action) => {
@@ -46,6 +48,8 @@ const reducer = (state, action) => {
       return { ...state, error: false };
     case actions.seterror:
       return { ...state, error: true, errormessage: action.payload };
+    case actions.add_fund:
+      return { ...state, allFunds: action.payload };
     case actions.logout:
       return { ...initialState };
     default:
@@ -53,4 +57,4 @@ const reducer = (state, action) => {
   }
 };
 
-export { actions, initialState, reducer };
+export { initialState, reducer };

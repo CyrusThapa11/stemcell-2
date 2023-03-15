@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useReducer, useCallback, useEffect } from "react";
 import Web3 from "web3";
 import EthContext from "./EthContext";
@@ -15,11 +16,12 @@ function EthProvider({ children }) {
       const { abi } = artifact;
       let address, contract;
       try {
+        console.log("artifact.networks in init ", artifact.networks);
         address = artifact.networks[networkID].address;
-        // console.log("networkID", networkID);
-        // console.log("address--- ", address);
-        // console.log("accounts--- ", accounts);
-        // console.log("abi--- ", abi);
+        console.log("networkID", networkID);
+        console.log("address--- ", address);
+        console.log("accounts--- ", accounts);
+        console.log("abi--- ", abi);
         contract = new web3.eth.Contract(abi, address);
       } catch (err) {
         console.error(err);
@@ -36,6 +38,7 @@ function EthProvider({ children }) {
       try {
         // const artifact = require("../../contracts/SimpleStorage.json");
         const artifact = require("../../contracts/PrivateBank.json");
+        console.log("artifact", artifact);
         init(artifact);
       } catch (err) {
         console.error(err);

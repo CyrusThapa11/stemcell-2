@@ -32,7 +32,11 @@ import MyAppointments from "./components/Banks/MyAppointments";
 import BookAppointment from "./components/Banks/BookAppointment";
 import PageNotFound from "./components/Banks/PageNotFound";
 import ViewPatient from "./components/Banks/ViewPatient";
-import CreateFund from "./components/Banks/CreateFund";
+import CreateFund from "./components/Banks/FundComponent/CreateFund";
+import FundTabComponent from "./components/Banks/FundComponent/FundTabComponent";
+import SingleFund from "./components/Banks/FundComponent/SingleFund";
+
+import AllFundComponent from "./components/Banks/FundComponent/AllFundComponent";
 
 const provider = new GoogleAuthProvider();
 function App() {
@@ -203,7 +207,13 @@ function App() {
         <Route
           exact
           path="/create-fund/"
-          element={<CreateFund />}
+          element={<FundTabComponent />}
+          // state.uid == null ? <Navigate to="/" /> :
+        />
+        <Route
+          exact
+          path="/fund/:id"
+          element={<SingleFund />}
           // state.uid == null ? <Navigate to="/" /> :
         />
         <Route
