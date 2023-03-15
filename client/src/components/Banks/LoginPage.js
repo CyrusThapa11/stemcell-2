@@ -24,8 +24,8 @@ const LoginPage = () => {
   // TODO SET ADD LOGIN REGISTER FUNCTIONALITY
 
   const { state, dispatch } = useContext(EthContext);
-  const [userState, setstate] = useState({});
   const navigate = useNavigate();
+  const [userState, setstate] = useState({});
 
   const register = async () => {
     if (

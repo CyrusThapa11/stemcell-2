@@ -126,6 +126,5 @@ contract PrivateBank {
         DonorToPatient[from] = to;
     }
 
-
-  
 }
+

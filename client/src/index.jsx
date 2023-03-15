@@ -6,6 +6,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { EthContext, EthProvider } from "./contexts/EthContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <>
     <BrowserRouter>
