@@ -37,6 +37,7 @@ import FundTabComponent from "./components/Banks/FundComponent/FundTabComponent"
 import SingleFund from "./components/Banks/FundComponent/SingleFund";
 
 import AllFundComponent from "./components/Banks/FundComponent/AllFundComponent";
+import Blog from "./components/Blog/Blog";
 
 const provider = new GoogleAuthProvider();
 function App() {
@@ -130,6 +131,7 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/donor/register" element={<Home />} />
         <Route exact path="/patient/register" element={<Home />} />

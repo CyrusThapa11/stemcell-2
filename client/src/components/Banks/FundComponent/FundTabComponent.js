@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import "../Home.css";
-// import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
 import CreateFund from "./CreateFund";
 import SingleFund from "./SingleFund";
 import AllFundComponent from "./AllFundComponent";
@@ -27,7 +27,7 @@ const FundTabComponent = () => {
               <CreateFund />
             </Tab>
             <Tab eventKey="profile" title="SingleFund">
-              {/* <SingleFund /> */}
+              <SingleFund />
             </Tab>
           </Tabs>
         </div>

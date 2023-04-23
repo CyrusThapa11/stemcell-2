@@ -42,8 +42,8 @@ const QueryModal = ({ styles, text, collectionn, Datepicker }) => {
   function closeModal() {
     setIsOpen(false);
   }
-  const handleChange = async () => {
-    console.log("handlechange , ", state.uid);
+  const handleChange = async () => { 
+    console.log("handlechange , ", state.uid,state.type);
     console.log("Inquiry--> ", Inquiry);
     console.log("AppointmentTime", AppointmentTime);
     await addDoc(collection(db, `${collectionn}`, `${state.uid}`, "personal"), {
