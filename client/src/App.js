@@ -38,6 +38,8 @@ import SingleFund from "./components/Banks/FundComponent/SingleFund";
 
 import AllFundComponent from "./components/Banks/FundComponent/AllFundComponent";
 import Blog from "./components/Blog/Blog";
+import Addblog from "./components/Blog/Addblog";
+import Readblog from "./components/Blog/Readblog";
 
 const provider = new GoogleAuthProvider();
 function App() {
@@ -132,6 +134,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/blog" element={<Blog />} />
+        <Route exact path="/readblog" element={<Readblog />} />
+        <Route exact path="/addblog" element={<Addblog />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/donor/register" element={<Home />} />
         <Route exact path="/patient/register" element={<Home />} />
@@ -210,12 +214,6 @@ function App() {
           exact
           path="/create-fund/"
           element={<FundTabComponent />}
-          // state.uid == null ? <Navigate to="/" /> :
-        />{" "}
-        <Route
-          exact
-          path="/all-funds/"
-          element={<AllFundComponent />}
           // state.uid == null ? <Navigate to="/" /> :
         />
         <Route
