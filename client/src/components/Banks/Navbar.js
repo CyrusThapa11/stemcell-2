@@ -85,6 +85,19 @@ const Navbar = ({ login, logout }) => {
             >
               All Fundings
             </Link>
+            <Link
+              to="/blog/"
+              className="mr-5 cursor-pointer font-semibold hover:bg-[#ECC5FB] hover:text-purple-600 p-2 rounded-lg"
+            >
+              All Blogs
+            </Link>
+
+            <Link
+              to="/addblog/"
+              className="mr-5 cursor-pointer font-semibold hover:bg-[#ECC5FB] hover:text-purple-600 p-2 rounded-lg"
+            >
+              Add Blog
+            </Link>
             {/* <p className="mr-5 cursor-pointer font-semibold hover:bg-[#ECC5FB] hover:text-purple-600 p-2 rounded-lg">
               Cart
             </p> */}
