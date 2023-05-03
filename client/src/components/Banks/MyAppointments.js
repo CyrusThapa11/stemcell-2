@@ -19,10 +19,10 @@ import Nodata from "./Nodata";
 const MyAppointments = () => {
   const { state, dispatch } = useContext(EthContext);
   const [UserPlans, setUserPlans] = useState(null);
-  const [request,setRequest]= useState([])
+  const [request, setRequest] = useState([]);
   useEffect(() => {
     // first;
-    console.log("user id is ",state.uid);
+    console.log("user id is ", state.uid);
     const getdata = async () => {
       const q = query(
         collection(db, "DiseaseInquiry", `${state.uid}`, "personal"),
@@ -30,10 +30,10 @@ const MyAppointments = () => {
       );
       const allRequests = [];
       const querySnapshot2 = await getDocs(q);
-      console.log(querySnapshot2)
+      console.log(querySnapshot2);
       querySnapshot2.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id,"--->>",doc.data())
+        console.log(doc.id, "--->>", doc.data());
         allRequests.push({ ...doc.data(), id: doc.id });
       });
       console.log("allRequests --> ", allRequests);
@@ -41,7 +41,7 @@ const MyAppointments = () => {
         console.log("Sorry cant process your request !");
         return;
       }
-      setRequest([...allRequests])
+      setRequest([...allRequests]);
     };
     getdata();
     return () => {};
@@ -80,65 +80,56 @@ const MyAppointments = () => {
               </tr>
             </thead>
             <tbody>
-              
               {request?.map((Inquiry1) => {
                 console.log("Inquiry1", Inquiry1);
                 return (
                   <>
-                  <tr
-                    key={Inquiry1.id}
-                    className="bg-indigo-500 border-b border-blue-400"
-                  >
-                    <th
-                      scope="row"
-                      className=" flex items-center py-2 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                    <tr
+                      key={Inquiry1.id}
+                      className="bg-indigo-500 border-b border-blue-400"
                     >
-                      <img
-                        className="w-10 h-10 rounded-full"
-                        src="/customer.jpg"
-                        alt="..."
-                      />
-                      <div className="pl-3">
-                        <div className="text-base font-semibold">
-                          {Inquiry1.firstname}
+                      <th
+                        scope="row"
+                        className=" flex items-center py-2 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                      >
+                        <img
+                          className="w-10 h-10 rounded-full"
+                          src="/customer.jpg"
+                          alt="..."
+                        />
+                        <div className="pl-3">
+                          <div className="text-base font-semibold">
+                            {Inquiry1.firstname}
+                          </div>
+                          <div className="font-normal text-blue-50">
+                            {Inquiry1.email}
+                          </div>
                         </div>
-                        <div className="font-normal text-blue-50">
-                          {Inquiry1.email}
+                      </th>
+                      <td className="py-4 px-4">{Inquiry1.id}</td>
+                      <td className="py-4 px-4">
+                        <div className="pl-3">
+                          <div className="text-base font-semibold">
+                            {Inquiry1.appointedTime.date}
+                          </div>
+                          <div className="font-normal text-blue-50">
+                            {Inquiry1.appointedTime.time}
+                          </div>
                         </div>
-                      </div>
-                    </th>
-                    <td className="py-4 px-4">
-                      {Inquiry1.id}
-                    </td>
-                    <td className="py-4 px-4">
-                    <div className="pl-3">
-                        <div className="text-base font-semibold">
-                          {Inquiry1.appointedTime.date}
+                      </td>
+                      <td className="py-4 px-4">
+                        <div className="pl-3">{Inquiry1.status}</div>
+                      </td>
+                      <td className="py-4 px-4">
+                        <div className="pl-3">
+                          <p>{Inquiry1.subject}</p>
                         </div>
-                        <div className="font-normal text-blue-50">
-                          {Inquiry1.appointedTime.time}
+                      </td>
+                      <td className="py-4 px-4">
+                        <div className="pl-3">
+                          <p>{Inquiry1.text}</p>
                         </div>
-                      </div>
-                    </td>
-                    <td className="py-4 px-4">
-                    <div className="pl-3">
-                        {Inquiry1.status}
-                      </div>
-                    </td>
-                    <td className="py-4 px-4">
-                    <div className="pl-3">
-                       <p>
-                        {Inquiry1.subject}
-                       </p>
-                      </div>
-                    </td>
-                    <td className="py-4 px-4">
-                    <div className="pl-3">
-                       <p>
-                        {Inquiry1.text}
-                       </p>
-                      </div>
-                    </td>
+                      </td>
                     </tr>
                   </>
                 );
@@ -148,7 +139,7 @@ const MyAppointments = () => {
         </div>
       </div>
     </>
-  )
+  );
 };
 
 export default MyAppointments;
