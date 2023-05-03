@@ -162,6 +162,7 @@ function Form() {
             />
             <h3>Patient</h3>
           </label>
+
           {errors.patientType && <p>Please enter Patient-Type.</p>}
 
           <label htmlFor="patientType" style={{ display: "flex" }}>
@@ -188,6 +189,7 @@ function Form() {
             />
             <h3>Verifier</h3>
           </label>
+
           {errors.patientType && <p>Please enter Patient-Type.</p>}
           <input className={classes.btn} type="submit" />
         </form>

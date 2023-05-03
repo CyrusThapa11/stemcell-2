@@ -124,8 +124,9 @@ const LoginPage = () => {
       toast.error("Incomplete credentials");
       return;
     }
+
     dispatch({ type: "SET_LOADING" });
-    console.log("register --> ");
+    console.log("login --> ", userState);
     // const docRef = doc(db, `${userState.type}`);
     // const docSnap = await getDoc(docRef);
     const q = query(
@@ -134,6 +135,7 @@ const LoginPage = () => {
     );
     const querySnapshot = await getDocs(q);
     let user;
+    console.log("querySnapshot", querySnapshot);
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
       console.log(doc.id, " => ", doc.data());

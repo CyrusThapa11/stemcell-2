@@ -131,6 +131,7 @@ function App() {
 		<div className="">
 			<Navbar login={login} logout={signout} />
 
+<<<<<<< HEAD
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route exact path="/blog" element={<Blog />} />
@@ -254,6 +255,135 @@ function App() {
 			<FooterComponent />
 		</div>
 	);
+=======
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/blog" element={<Blog />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/donor/register" element={<Home />} />
+        <Route exact path="/patient/register" element={<Home />} />
+        <Route
+          exact
+          path="/Donor/dashboard"
+          element={
+            <PatientDashboard />
+            //  state.uid == null ? <Navigate to="/" /> :
+          }
+        />
+        <Route
+          exact
+          path="/Patient/dashboard"
+          element={<NeedyPatient />}
+          // state.uid == null ? <Navigate to="/" /> :
+        />
+        <Route
+          exact
+          path="/Verifier/dashboard"
+          element={<VerifierDashboard />}
+        />
+        <Route exact path="/stem-cell-bank" element={<StemcellPage />} />
+        <Route
+          exact
+          path="/my-plans/"
+          element={<PatientPlans />}
+          // state.uid == null ? <Navigate to="/" /> :
+        />
+        {/* <Route exact path="/all-patients/" element={<AllPatientsPage />} /> */}
+        <Route
+          exact
+          path="/Bank/dashboard/"
+          element={
+            state.uid == null ? (
+              <Navigate to="/" />
+            ) : (
+              <BankDashboard Component={BankData} />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/patients/"
+          element={
+            state.uid == null ? (
+              <Navigate to="/" />
+            ) : (
+              <BankDashboard Component={AllPatientsPage} />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/donors/"
+          element={
+            state.uid == null ? (
+              <Navigate to="/" />
+            ) : (
+              <BankDashboard Component={AllDonorsPage} />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/stemcells/"
+          element={
+            state.uid == null ? (
+              <Navigate to="/" />
+            ) : (
+              <BankDashboard Component={AllStemCellsPage} />
+            )
+          }
+        />
+        <Route
+          exact
+          path="/create-fund/"
+          element={<FundTabComponent />}
+          // state.uid == null ? <Navigate to="/" /> :
+        />{" "}
+        <Route
+          exact
+          path="/all-funds/"
+          element={<AllFundComponent />}
+          // state.uid == null ? <Navigate to="/" /> :
+        />
+        <Route
+          exact
+          path="/fund/:id"
+          element={<SingleFund />}
+          // state.uid == null ? <Navigate to="/" /> :
+        />
+        <Route
+          exact
+          path="/plans/"
+          element={<BankDashboard Component={AllStemCellsPage} />}
+        />
+        <Route
+          exact
+          path="/my-appointments/"
+          element={<MyAppointments Component={AllStemCellsPage} />}
+        />
+        <Route
+          exact
+          path="/book-appointment/"
+          element={<BookAppointment Component={AllStemCellsPage} />}
+        />
+        <Route exact path="/Login/" element={<LoginPage />} />
+        <Route
+          exact
+          path="/patient/:id"
+          element={
+            state.uid == null ? (
+              <Navigate to="/" />
+            ) : (
+              <BankDashboard Component={ViewPatient} />
+            )
+          }
+        />
+        <Route exact path="*" element={<PageNotFound />} />
+      </Routes>
+      <FooterComponent />
+    </div>
+  );
+>>>>>>> f33de512db88a2d94a25ec1ae226eccfd33dd7af
 }
 
 export default App;
