@@ -13,6 +13,7 @@ module.exports = {
   },
   resolve: { extensions },
   devServer: {
+    port: 9000,
     historyApiFallback: true,
     client: {
       overlay: false,

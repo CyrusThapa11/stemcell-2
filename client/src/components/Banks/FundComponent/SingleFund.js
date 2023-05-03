@@ -52,7 +52,7 @@ const SingleFund = () => {
         const data = await contract.methods.transferToRequest(fundNo).send(
           {
             from: accounts[0],
-            value: Amount*1000000000000000000,
+            value: Amount * 1000000000000000000,
           },
           function (error, transactionHash) {
             console.log("error --> ", error);
@@ -71,7 +71,7 @@ const SingleFund = () => {
   return (
     <>
       {fund && (
-        <div className="fund min-h-[100vh] py-10 w-full  px-20 mb-14">
+        <div className="fund min-h-[100vh] py-10 w-full  px-20 ">
           <div className=" w-full  ">
             <div className="  w-full flex gap-5 bg-white bg-opacity-50 backdrop-blur-xl rounded drop-shadow-lg p-6">
               {/* <img src={} alt="" /> */}
@@ -82,13 +82,14 @@ const SingleFund = () => {
                   srcset=""
                 />
               </div>
-              <div className="p-5  my-3 overflow-y-scroll w-[40vw] ">
+              <div className="p-5  my-3  w-[40vw] ">
                 <h2>{fund.name}</h2>
                 <p>{fund.description}</p>
 
                 <div className="flex my-3 justify-between ">
                   <input
                     type="number"
+                    className="px-2 py-1"
                     onChange={(e) => setAmount(e.target.value)}
                   />
                   <button
@@ -101,23 +102,28 @@ const SingleFund = () => {
                 <div className="flex my-3 justify-between ">
                   <div>
                     <p>requied amount</p>
-                    <p>1000 matic</p>
+                    <p>{fund.target / 1000000000000000000} Eth</p>
                   </div>
                   <div>
                     <p>received amount</p>
-                    <p>.50 matic</p>
-                  </div>
-                </div>
-                <div>
-                  <h2>Recent donations</h2>
-                  <div>
-                    <p> 10000000 10/14/2022 </p>
-                    <p> 10000000 10/14/2022 </p>
+                    <p>{fund.fundraised / 1000000000000000000} Eth</p>
                   </div>
                 </div>
 
-                <div className="flex my-2 justify-between align-items-center  ">
+                <div className="flex flex-col my-2 justify-between align-items-center overflow-y-scroll ">
+                  <h2>Recent donations</h2>
                   <p> Total contributors : {fund.contributers.length} </p>
+                  {fund &&
+                    fund.contributers.map((ethid, index) => {
+                      return (
+                        <>
+                          <div className=" px-3 py-1 flex justify-between gap-2 ">
+                            <p> {ethid} </p>
+                            <p> Amount : {fund.amoutTocontributers[index]} </p>
+                          </div>
+                        </>
+                      );
+                    })}
                 </div>
               </div>
             </div>
