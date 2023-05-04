@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { EthContext } from "../../contexts/EthContext";
-import { VerticalChart } from "./VerticalChart";
 import {
   collection,
   doc,

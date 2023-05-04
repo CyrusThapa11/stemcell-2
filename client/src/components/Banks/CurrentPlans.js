@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
-import Profile from "./Profile";
-import Sidebar from "./Sidebar";
 import MyplanCard from "./MyplanCards";
 import { EthContext } from "../../contexts/EthContext";
 

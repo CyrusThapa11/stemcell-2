@@ -2,7 +2,6 @@
 import {
   collection,
   doc,
-  getDoc,
   getDocs,
   updateDoc,
 } from "firebase/firestore";
@@ -11,7 +10,6 @@ import { db } from "../../firebase";
 import Card from "./Card";
 
 const AllDonorsPage6 = () => {
-  const users = [{ id: "1231", name: "naman" }];
   const [DonorPatients, setDonorPatients] = useState([]);
   const [CurrentHLA, setCurrentHLA] = useState(null);
   const getDonors = async () => {

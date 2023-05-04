@@ -256,7 +256,7 @@ const Accordian = () => {
               <p className="mb-2 text-gray-500 dark:text-gray-400">
                 Yes! You can now extend stem cell protection to extended family
                 members including biological siblings of the parents, their
-                spouses and the children \>= 2 years with LifeCell’s Family
+                spouses and the children \= 2 years with LifeCell’s Family
                 Floater Plan.
               </p>
             </div>

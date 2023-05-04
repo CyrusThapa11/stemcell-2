@@ -5,7 +5,6 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 
 const AllStemCellsPage = () => {
-  const { state, dispatch } = useContext(EthContext);
   const [Stemcells, setStemcells] = useState([]);
 
   useEffect(() => {

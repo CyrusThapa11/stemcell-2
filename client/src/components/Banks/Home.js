@@ -4,7 +4,6 @@ import "./Home.css";
 
 import Carasouls from "./Forms/Carasouls";
 import CardsComponent from "./CardsComponent";
-import FooterComponent from "./FooterComponent";
 import VideoComponent from "./VideoComponent";
 import Testimonials from "./Testimonials";
 

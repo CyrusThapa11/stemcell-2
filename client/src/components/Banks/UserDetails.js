@@ -1,12 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect, useRef } from "react";
-import { useContext } from "react";
-import { EthContext } from "../../contexts/EthContext";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { EthContext } from "../../contexts/EthContext";
 import { db } from "../../firebase";
-import { useState } from "react";
-import { createRef } from "react";
 
 const UserDetails = () => {
   // TODO SEE WHOS LOGGEDIN AND CHANGE HIS DATA IF HE CHANGES IT

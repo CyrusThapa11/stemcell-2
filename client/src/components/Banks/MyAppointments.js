@@ -1,24 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import Profile from "./Profile";
-import Sidebar from "./Sidebar";
-import MyplanCard from "./MyplanCards";
 import { EthContext } from "../../contexts/EthContext";
 
 import {
   collection,
-  doc,
-  getDoc,
   getDocs,
   orderBy,
   query,
-  updateDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase";
-import Nodata from "./Nodata";
 
 const MyAppointments = () => {
   const { state, dispatch } = useContext(EthContext);
-  const [UserPlans, setUserPlans] = useState(null);
   const [request, setRequest] = useState([]);
   useEffect(() => {
     // first;

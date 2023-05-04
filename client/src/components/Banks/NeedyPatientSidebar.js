@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
+import { DatePicker, TimePicker } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import QueryModal from "./QueryModal";
-import { DatePicker, Select, Space, TimePicker } from "antd";
-const { Option } = Select;
 
 const PickerWithType = ({ type, onChange }) => {
   if (type === "time") return <TimePicker onChange={onChange} />;

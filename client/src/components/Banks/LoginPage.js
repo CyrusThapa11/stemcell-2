@@ -2,23 +2,21 @@
 import React, { useContext, useState } from "react";
 import ReactLoading from "react-loading";
 
-import { EthContext } from "../../contexts/EthContext";
 import {
-  collection,
   addDoc,
-  getDoc,
-  query,
-  where,
-  getDocs,
-  setDoc,
+  collection,
   doc,
+  getDoc,
+  getDocs,
+  query,
+  setDoc,
+  where,
 } from "firebase/firestore";
-import { db } from "../../firebase";
-import { data } from "./VerticalChart";
-import LoadingComponent from "./LoadingComponent";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { EthContext } from "../../contexts/EthContext";
+import { db } from "../../firebase";
 
 const LoginPage = () => {
   // TODO SET ADD LOGIN REGISTER FUNCTIONALITY

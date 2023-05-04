@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import FAQstem from "./FAQstem";
 import Plans from "./Plans";
 import VideoComponent from "./VideoComponent";
-import FAQstem from "./FAQstem";
-import WhyPreserver from "./WhyPreserver";
-import Accordian from "./Accordian";
 
 const StemcellPage = () => {
   return (

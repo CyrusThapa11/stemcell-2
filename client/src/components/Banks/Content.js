@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Profile from "./Profile";
 import UserDetails from "./UserDetails";
 
 const Content = () => {

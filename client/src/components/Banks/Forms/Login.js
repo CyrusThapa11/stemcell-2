@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import '../Css/login.css'
 import Navbar from '../Components/Navbar.js'
+import '../Css/login.css'
 export default function Login() {
 	return (
 		<>

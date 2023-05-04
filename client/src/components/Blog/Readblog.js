@@ -1,13 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react";
+import {
+  doc,
+  getDoc
+} from "firebase/firestore";
+import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { db } from "../../firebase";
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  updateDoc,
-} from "firebase/firestore";
 
 export default function Readblog() {
   const [searchParams, setSearchParams] = useSearchParams();

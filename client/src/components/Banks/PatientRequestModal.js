@@ -1,16 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from "react";
-import ReactDOM from "react-dom";
-import Modal from "react-modal";
 import {
-  doc,
   addDoc,
-  setDoc,
-  serverTimestamp,
   collection,
+  serverTimestamp
 } from "firebase/firestore";
-import { db } from "../../firebase";
+import React, { useContext } from "react";
+import Modal from "react-modal";
 import { EthContext } from "../../contexts/EthContext";
+import { db } from "../../firebase";
 // import firebase from "firebase";
 
 const customStyles = {
