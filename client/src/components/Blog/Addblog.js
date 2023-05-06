@@ -20,7 +20,6 @@ export default function Addblog() {
     const headingValue = headVal.current.value;
     const userValue = userVal.current.value;
     // console.log(`This is uuid ` + id)
-
     // if (headingValue === "") {
     // 	toast.error('Blog Heading cannot be empty')
     // 	return

@@ -218,6 +218,12 @@ function App() {
         />
         <Route
           exact
+          path="/all-funds/"
+          element={<AllFundComponent />}
+          // state.uid == null ? <Navigate to="/" /> :
+        />
+        <Route
+          exact
           path="/fund/:id"
           element={<SingleFund />}
           // state.uid == null ? <Navigate to="/" /> :
