@@ -98,32 +98,12 @@ export default function Addblog() {
 					/>
 				</div>
 
-				{/* <select ref={selectVal} class="form-select form-select-sm mb-3 bg-dark text-white " aria-label=".form-select-lg example">
-					<option selected value="0">Define Category</option>
-					<option value="Indian Polity">Indian Polity</option>
-					<option value="Geopolitics">Geopolitics</option>
-					<option value="Indian History">Indian History</option>
-					<option value="Economy">Economy</option>
-					<option value="Geography">Geography</option>
-					<option value="Politics">Politics</option>
-					<option value="Tech">Tech</option>
-					<option value="Personalities">Personalities</option>
-				</select> */}
-
 				<Editor
 					ref={editorRef}
 					// onChange={handleOnChange}
 					onInit={(evt, editor) => (editorRef.current = editor)}
 					initialValue={ini}
 					init={{
-						// setup: function (ed) {
-						// 	ed.on('change', function (e) {
-						// 		console.log('the event object ', e);
-						// 		console.log('the editor object ', ed);
-						// 		console.log('the content ', ed.getContent());
-						// 	});
-						// },
-						// onchange_callback: "handleOnChange",
 						selector: "textarea",
 						height: 300,
 						menubar: true,
