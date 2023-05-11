@@ -2,12 +2,12 @@
 import React, { useContext } from "react";
 import { EthContext } from "../../contexts/EthContext";
 
-import classes from "../../Css/Navbar.module.css";
 import { Link } from "react-router-dom";
+import classes from "../../Css/Navbar.module.css";
 
 const Navbar = ({ login, logout }) => {
-  const { state, dispatch } = useContext(EthContext);
-  const { web3, accounts, contract } = state;
+  const { state } = useContext(EthContext);
+  const { accounts, contract } = state;
 
   // TODO USE THIS FUNCTION
   const getbalance = async () => {

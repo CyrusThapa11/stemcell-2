@@ -4,7 +4,6 @@ import "./App.css";
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./components/Banks/Home";
 import Register from "./components/Banks/Register";
-import Dashboards from "./components/Banks/Dashboards";
 import PatientDashboard from "./components/Banks/PatientDashboard";
 import Navbar from "./components/Banks/Navbar";
 
@@ -36,7 +35,6 @@ import CreateFund from "./components/Banks/FundComponent/CreateFund";
 import FundTabComponent from "./components/Banks/FundComponent/FundTabComponent";
 import SingleFund from "./components/Banks/FundComponent/SingleFund";
 
-import AllFundComponent from "./components/Banks/FundComponent/AllFundComponent";
 import Blog from "./components/Blog/Blog";
 import Addblog from "./components/Blog/Addblog";
 import Readblog from "./components/Blog/Readblog";

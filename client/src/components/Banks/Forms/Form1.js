@@ -1,15 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import { doc, setDoc } from "firebase/firestore";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import "../../../Css/Navbar.module.css";
 import classes from "../../../Css/form.module.css";
-import Navbar from "./Navbar";
-import { doc, setDoc, serverTimestamp, getDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
-import { useContext } from "react";
 import EthContext from "./../../../contexts/EthContext/EthContext";
-import { collection, query, where } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Form() {
   const navigate = useNavigate();

@@ -1,20 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 
-import { useContext } from "react";
 import {
-  getDocs,
-  doc,
   collection,
+  doc,
   getDoc,
+  getDocs,
   orderBy,
   query,
 } from "firebase/firestore";
-import { db } from "../../firebase";
+import { useContext } from "react";
 import { EthContext } from "../../contexts/EthContext";
+import { db } from "../../firebase";
 import { VerticalChart } from "./VerticalChart";
-import PieChart from "./PieChart";
-import { Link } from "react-router-dom";
 
 const VerifierDashboard = () => {
   // TODO GET THE REQUESTS FROM INQUIRY DB WITH TIME STAMP ADD FEATURES FOR ADDITION OF SORTING / FILTERING

@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { Route, Link, Routes } from "react-router-dom";
-import Home from "./Home";
 
 const Index = () => {
   return (
