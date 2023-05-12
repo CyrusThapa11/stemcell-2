@@ -210,10 +210,13 @@ function App() {
             )
           }
         />
+
         <Route
           exact
           path="/create-fund/"
-          element={<FundTabComponent />}
+          element={
+            state.uid == null ? <Navigate to="/" /> : <FundTabComponent />
+          }
           // state.uid == null ? <Navigate to="/" /> :
         />
         <Route

@@ -86,6 +86,12 @@ const Navbar = ({ login, logout }) => {
               All Fundings
             </Link>
             <Link
+              to="/create-fund/"
+              className="mr-5 cursor-pointer font-semibold hover:bg-[#ECC5FB] hover:text-purple-600 p-2 rounded-lg"
+            >
+              Create Fund
+            </Link>
+            <Link
               to="/blog/"
               className="mr-5 cursor-pointer font-semibold hover:bg-[#ECC5FB] hover:text-purple-600 p-2 rounded-lg"
             >
